@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>模板替换</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+  <div class="wrap">
+    <div id="user">
+      <div id="top">
+        <img src='{avatar}' width='100' height='100' />
+        <div id="hide">&nbsp;帐号:{帐号}</div>
+        <div>&nbsp;姓名:{name}</div>
+        <div>&nbsp;手机:{mobile}</div>
+      </div>
+    </div>
+  
+    <br />
+    <div style="clear:both;"></div>
+    <br />
+
+    <table width="633" border="1" id="thtable">
+      <tr>
+        <th width="158" scope="col">帐号</th>
+        <th width="230" scope="col">姓名</th>
+        <th width="223" scope="col">手机</th>
+      </tr>
+      <tr class="thtr" id="thtr">
+        <td>{帐号}</td>
+        <td>{name}</td>
+        <td>{mobile}</td>
+      </tr>
+    </table>
+
+    <br /><br />
+
+    <div id="box">
+      <ul id="lst">
+        <li class="item"><span>{ABC}</span><span><img src='{avatar}' width='100' height='100' /></span><span>/{帐号}/</span><span>{name}/</span><span>{mobile}</span></li>
+      </ul>
+    </div>
+  </div>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/tmeplate.js"></script>
+    <script>
+    	var data = {
+	        "帐号":"Sublime",
+	        "name":"张三丰",
+	        "mobile":"15001111111",
+	        "avatar":"images/1.jpg"
+	    }
+	    var data2={
+	        "data":[
+	            {"帐号":"Sublime","name":"张三丰","avatar":"images/1.jpg","mobile":"15001111111"},
+	            {"帐号":"Sublime","name":"张三丰","avatar":"images/1.jpg","mobile":"15001111111"},
+	            {"帐号":"Sublime","name":"张三丰","avatar":"images/1.jpg","mobile":"15001111111"},
+	            {"帐号":"Sublime","name":"张三丰","avatar":"images/1.jpg","mobile":"15001111111"},
+	            {"帐号":"Sublime","name":"张三丰","avatar":"images/1.jpg","mobile":"15001111111"}
+	        ]
+	    }
+
+	    $("#top").tmeplate(data);
+
+	    //$("#thtr").tmeplate(data2.data);
+	    //$("#lst li").tmeplate(data2.data);
+    </script>
+  </body>
+</html>

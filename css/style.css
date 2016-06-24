@@ -1,0 +1,10 @@
+body { margin: 0; background: #fff; }
+table,ul { margin: 0; }
+li { list-style: none; }
+
+.wrap { width: 80%; margin: 20px auto 0; }
+#user {}
+    #top {}
+    #top img { float: left; margin-right: 10px; }
+#thtable {}
+#box {}
